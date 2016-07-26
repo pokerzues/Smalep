@@ -1,0 +1,26 @@
+Smalep.py:
+    程序入口程序，主程序
+
+Smalep_serial.py:
+    串口类
+
+Smalep_cv.py:
+    视觉处理类
+
+Smalep_net.py:
+    网络类
+
+Smalep_facepp.py:
+    Face++接口类
+
+face.png:
+    缓冲图片
+
+haarcascade_frontalface_alt.xml:
+    人脸识别训练文件
+
+facepp.py:
+    Face++官方类库
+
+.idea文件夹：
+    PyCharm程序工作空间文件夹

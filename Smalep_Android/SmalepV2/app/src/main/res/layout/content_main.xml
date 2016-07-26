@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Main"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e3e3e3"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/swlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/switch_height"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="top|left"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="灯光"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/lightswll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|right"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/lighttv1"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/lighttv2"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/lighttv3"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="打开"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="30px" />
+
+                        <TextView
+                            android:id="@+id/lighttv4"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/lighttv5"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/sblight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:max="254"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/swfan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/switch_height"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="top|left"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="空调"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/fanswll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|right"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/fantv1"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/fantv2"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/fantv3"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="打开"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="30px" />
+
+                        <TextView
+                            android:id="@+id/fantv4"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/fantv5"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/sbfan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:max="254"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/swhumidifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/switch_height"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="top|left"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="加湿器"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/humidifierswll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|right"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/humidifiertv1"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/humidifiertv2"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/humidifiertv3"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="打开"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="30px" />
+
+                        <TextView
+                            android:id="@+id/humidifiertv4"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/humidifiertv5"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/swheater"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/switch_height"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="top|left"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="加热板"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/heaterswll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|right"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/heatertv1"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/heatertv2"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/heatertv3"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="打开"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="30px" />
+
+                        <TextView
+                            android:id="@+id/heatertv4"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="自动"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textSize="20px" />
+
+                        <TextView
+                            android:id="@+id/heatertv5"
+                            android:layout_width="90px"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:gravity="center_vertical|bottom|center_horizontal"
+                            android:text="关闭"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="Powered by TYUT-IOT "
+                android:textSize="12dp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
